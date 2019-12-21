@@ -55,8 +55,33 @@
       }
     }
   }
-  // 手機 & 平板
-  @media screen and (max-width: 1023px) {
+  // Pad
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    #contact{
+      .contactContent{
+        box-sizing: border-box;
+        width: 80%;
+        .contact{
+          width: 50%;
+          display: flex;
+          margin-top:10px;
+          .icon{
+            text-align: right;
+            width: 40%;
+          }
+          .content{
+            width: 60%;
+            font-size: 1em;
+            line-height: 1.5em;
+            padding-top: 0.4em;
+            padding-left: 2em;
+          }
+        }
+      }
+    }
+  }
+  // Mobile
+  @media screen and (max-width: 767px) {
     #contact{
       .contactContent{
         box-sizing: border-box;

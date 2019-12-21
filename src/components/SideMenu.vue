@@ -48,8 +48,8 @@
     }
   }
 }
-// 手機 & 平板
-@media screen and (max-width: 1023px) {
+// Pad
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   #side_menu{
     top: 150px;
     li{
@@ -59,6 +59,28 @@
     }
     li:hover{
       width: 70px;
+    }
+  }
+}
+// Mobile
+@media screen and (max-width: 767px) {
+  #side_menu{
+    width: 100%;
+    margin-top: 42px; 
+    ul{
+      width: 100%;
+    }
+    li{
+      display: inline-block;
+      box-sizing: border-box;
+      width: 19%;
+      font-size: 0.8em;
+      padding: 12px 0px;
+      margin-top: 2px;
+    }
+    li:hover{
+      text-align: center;
+      padding-right: 0px;
     }
   }
 }

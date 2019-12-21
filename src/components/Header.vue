@@ -22,7 +22,7 @@ p{
   letter-spacing: 0.8em;
   padding-left: 50px;
 }
-// 手機 & 平板
+// Mobile & Pad
 @media screen and (max-width: 1023px) {
   div{
     padding:15px 0;

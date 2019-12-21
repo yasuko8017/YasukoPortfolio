@@ -65,8 +65,35 @@
       }
     }
   }
-  // 手機 & 平板
-  @media screen and (max-width: 1023px) {
+  // Pad
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    #about{
+      .aboutContent{
+        width: 80%;
+        flex-direction: column;
+        .photo{
+          text-align: center;
+          padding-top: 30px;
+          img{
+            width: 50%
+          }
+        }
+        .intro{
+          box-sizing: border-box;
+          .name{
+            font-size: 1.5em;
+            padding: 1em 0em;
+          }
+          p{
+            font-size: 0.9em;
+            line-height: 1.5em;
+          }
+        }
+      }
+    }
+  }
+  // Mobile
+  @media screen and (max-width: 767px) {
     #about{
       .aboutContent{
         width: 100%;

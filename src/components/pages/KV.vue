@@ -66,7 +66,6 @@
         box-sizing: border-box;
         img{
           display: block;
-          margin-top: 180px;
         }
       }
     }
@@ -98,12 +97,50 @@
         }
         .photo {
           width: 35%;
+          img{
+            margin-top: 180px;
+          }
         }
       }
     }
   }
-  // 手機 & 平板
-  @media screen and (max-width: 1023px) {
+  // Pad
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    #kv {
+      .roleContent{
+        width: 100%;
+        flex-direction: row;
+        .wording{
+          width: 65%;
+          margin-top: 200px;
+          padding-left: 120px;
+          h1 {
+            font-size: 1.5em;
+          }
+          .role{
+            line-height: 1.5em;
+            margin-bottom: 10px;
+            p{
+              font-size: 1em;
+            }
+            p span{
+              color: red;
+            }
+          }
+        }
+        .photo {
+          width: 35%;
+          display: block;
+          margin-right: 30px;
+          img{
+            margin-top: 100px;
+          }
+        }
+      }
+    }
+  }
+  // Mobile
+  @media screen and (max-width: 767px) {
     #kv {
       .roleContent{
         width: 100%;
@@ -124,7 +161,7 @@
         .photo {
           position: relative;
           height: 300px;
-          margin-top: 150px;
+          margin-top: 120px;
           overflow: hidden;
           img{
             position: absolute;

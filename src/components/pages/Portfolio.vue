@@ -26,8 +26,17 @@
       }
     }
   }
-  // 手機 & 平板
-  @media screen and (max-width: 1023px) {
+  // Pad
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    #portfolio{
+      .portfolioContent{
+        box-sizing: border-box;
+        width: 100%;
+      }
+    }
+  }
+  // Mobile
+  @media screen and (max-width: 767px) {
     #portfolio{
       .portfolioContent{
         box-sizing: border-box;
