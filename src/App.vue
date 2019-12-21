@@ -1,60 +1,54 @@
-<template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul>
-  </div>
-</template>
-
 <script>
+import SideMenu from './components/SideMenu.vue';
+import Header from './components/Header.vue';
+import KV from './components/pages/KV.vue';
+import About from './components/pages/About.vue';
+import Contact from './components/pages/Contact.vue';
+import Portfolio from './components/pages/Portfolio.vue';
+import Practice from './components/pages/Practice.vue';
+import Footer from './components/pages/Footer.vue';
+
 export default {
-  name: 'app',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
-  }
-}
+  components: {
+    Header,
+    SideMenu,
+    KV,
+    About,
+    Contact,
+    Portfolio,
+    Practice,
+    Footer,
+  },
+};
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<template>
+  <div>
+    <Header/>
+    <SideMenu/>
+    <KV/>
+    <About/>
+    <Contact/>
+    <Portfolio/>
+    <Practice/>
+    <Footer/>
+</div>
+</template>
 
-h1, h2 {
-  font-weight: normal;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
+<style lang="sass" src="./style/reset.sass"></style>
+<style lang="scss">
+  body{
+    font-family: "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif;
+  }
+  h2{
+    font-size: 2em;
+    font-weight: bolder;
+    letter-spacing: 0.3em;
+    text-align: center;
+    padding: 2.2em 0 1em 0;
+    span{
+      color: #8DABC5;
+      padding: 15px 100px;
+    }
+  }
 </style>
