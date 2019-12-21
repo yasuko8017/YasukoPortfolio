@@ -1,67 +1,140 @@
 <template>
   <div id='kv'>
-    <div>
-      <h1>I'M YASUKO</h1>
-      <div class="role">
-        <p>A FULL STACK DEVELOPER</p> 
-        <p>& GONNA BE A <span>FRONTEND DEVELOPER</span></p>
+    <div class="roleContent">
+      <div class="wording">
+        <h1>I'M YASUKO</h1>
+        <div class="role">
+          <p>A FULL STACK DEVELOPER</p> 
+          <p>& GONNA BE A <span>FRONTEND DEVELOPER</span></p>
+        </div>
+        <div class="icons">
+          <a href="https://www.facebook.com/ChenYasuko">
+            <font-awesome-icon :icon="['fab', 'facebook']" size="lg" style="color:#4A8060"/>
+          </a>
+          <a href="https://www.linkedin.com/in/yasuko-chen-479584b3/">
+            <font-awesome-icon :icon="['fab', 'linkedin-in']" size="lg" style="color:#4A8060"/>
+          </a>
+          <a href="https://github.com/yasuko8017">
+            <font-awesome-icon :icon="['fab', 'github']" size="lg" style="color:#4A8060"/>
+          </a>
+          <a href="https://codepen.io/yasukochen">
+            <font-awesome-icon :icon="['fab', 'codepen']" size="lg" style="color:#4A8060"/>
+          </a>
+        </div>
       </div>
-      <div class="icons">
-        <a href="https://www.facebook.com/ChenYasuko"><font-awesome-icon :icon="['fab', 'facebook']" size="lg" style="color:#4A8060"/></a>
-        <a href="https://www.linkedin.com/in/yasuko-chen-479584b3/"><font-awesome-icon :icon="['fab', 'linkedin-in']" size="lg" style="color:#4A8060"/></a>
-        <a href="https://github.com/yasuko8017"><font-awesome-icon :icon="['fab', 'github']" size="lg" style="color:#4A8060"/></a>
-        <a href="https://codepen.io/yasukochen"><font-awesome-icon :icon="['fab', 'codepen']" size="lg" style="color:#4A8060"/></a>
+      <div class="photo">
+        <img src="../../assets/yasuko.png" alt="yasuko photo">
       </div>
     </div>
-    <img class="yasuko" src="../../assets/yasuko.png" alt="yasuko photo">
   </div>
 </template>
 
 <style lang="scss" scoped>
   #kv {
-    height: 700px;
     width: 100%;
-    background: linear-gradient(60deg, #DBEDF0 35%, #fff, #80A491);
-    position: relative;
-    z-index: 0;
-    .yasuko {
-      right: 50px;
-      height: 600px;
-      position: absolute;
-      bottom: 0;
-      z-index: 0;
-    }
-    h1 {
-      color: #002D5E;
-      font-size: 3em;
-      font-weight: bolder;
-      letter-spacing: 0.1em;
-      position: absolute;
-      top: 300px;
-      left: 300px;
-    }
-    .role{
-      position: absolute;
-      top: 370px;
-      left: 300px;
-      line-height: 1.8em;
-      p{
-        color: #002D5E;
-        opacity:0.5;
-        font-size: 1.2em;
-        font-weight: bold;
+    background: linear-gradient(60deg, #DBEDF0 30%, #fff, #80A491);
+    .roleContent{
+      display: flex;
+      margin:0px auto;
+      .wording{
+        box-sizing: border-box;
+        h1 {
+          color: #002D5E;
+          font-weight: bolder;
+          letter-spacing: 0.1em;
+          margin-bottom: 10px;
+        }
+        .role{
+          p{
+            color: #002D5E;
+            opacity:0.5;
+            font-size: 1.2em;
+            font-weight: bold;
+          }
+          p span{
+            color: red;
+          }
+        }
+        .icons{
+          a{
+            display: inline;
+            margin-right: 5px;
+          }
+        }
       }
-      p span{
-        color: red;
+      .photo {
+        box-sizing: border-box;
+        img{
+          display: block;
+          margin-top: 180px;
+        }
       }
     }
-    .icons{
-      position: absolute;
-      top: 450px;
-      left: 300px;
-      a{
-        display: inline;
-        margin-right: 5px;
+  }
+
+  // PC
+  @media screen and (min-width: 1024px) {
+    #kv {
+      .roleContent{
+        width: 960px;
+        flex-direction: row;
+        .wording{
+          width: 65%;
+          margin-top: 300px;
+          padding-left: 80px;
+          h1 {
+            font-size: 2.5em;
+          }
+          .role{
+            line-height: 1.8em;
+            margin-bottom: 15px;
+            p{
+              font-size: 1.2em;
+            }
+            p span{
+              color: red;
+            }
+          }
+        }
+        .photo {
+          width: 35%;
+        }
+      }
+    }
+  }
+  // 手機 & 平板
+  @media screen and (max-width: 1023px) {
+    #kv {
+      .roleContent{
+        width: 100%;
+        flex-direction: column-reverse;
+        .wording{
+          margin: 60px auto;
+          h1{
+            font-size: 1.5em;
+          }
+          .role{
+            line-height: 1.5em;
+            margin-bottom: 10px;
+            p{
+              font-size: 1em;
+            }
+          }
+        }
+        .photo {
+          position: relative;
+          height: 300px;
+          margin-top: 150px;
+          overflow: hidden;
+          img{
+            position: absolute;
+            width: auto;
+            height: 100%;
+            bottom: 0;
+            left: 50%;
+            margin-left: -20%;
+          }
+        }
       }
     }
   }

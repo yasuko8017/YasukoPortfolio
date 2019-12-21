@@ -5,5 +5,11 @@ import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faCodepen } from '@fortawesome/free-brands-svg-icons';
+import { faAddressCard } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faFacebook, faLinkedinIn, faGithub, faCodepen);
+library.add(faFacebook, 
+            faLinkedinIn, 
+            faGithub, 
+            faCodepen,
+            faAddressCard
+            );

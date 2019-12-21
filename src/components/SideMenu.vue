@@ -13,15 +13,11 @@
 <style lang="scss" scoped>
 #side_menu{
   position: fixed;
-  top: 30%;
   z-index: 9;
   li{
-    width: 80px;
-    font-size: 1em;
     font-weight:500;
     text-align: center;
     align-self: auto;
-    padding: 20px 10px;
     margin-top: 2px;
     background: #7FC1D0;
     opacity:0.6;
@@ -30,12 +26,39 @@
     }
   }
   li:hover{
-    width: 100px;
     opacity:1;
     text-align: right;
     padding-right: 30px;
     a{
       color: #fff;
+    }
+  }
+}
+// PC
+@media screen and (min-width: 1024px) {
+  #side_menu{
+    top: 30%;
+    li{
+      width: 80px;
+      font-size: 1em;
+      padding: 20px 10px;
+    }
+    li:hover{
+      width: 100px;
+    }
+  }
+}
+// 手機 & 平板
+@media screen and (max-width: 1023px) {
+  #side_menu{
+    top: 150px;
+    li{
+      width: 60px;
+      font-size: 0.8em;
+      padding: 15px 10px;
+    }
+    li:hover{
+      width: 70px;
     }
   }
 }

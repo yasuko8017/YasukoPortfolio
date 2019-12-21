@@ -1,31 +1,83 @@
 <template>
   <div id='contact'>
-    <h2>
-      <span>
+    <div class="contactContent">
+      <h2>
         CONTACT
-      </span>
-    </h2>
-    <div class="contact">
-      <p>yasuko8017@hotmail.com</p>
-      <p>Keelung</p>
+      </h2>
+      <div class="contact">
+        <div class="icon">
+          <font-awesome-icon :icon="['fas', 'address-card']" size="4x" style="color:#80A491"/>
+        </div>
+        <div class="content">
+          <p>yasuko8017@hotmail.com</p>
+          <p>Keelung</p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
   #contact{
-    height: 230px;
     width: 100%;
     background: linear-gradient(to right, #FFFFFF, #DBEDF0, #FFFFFF);
-    .contact{
-      width: 200px;
-      margin-left: 40%;
+    .contactContent{
+      margin:0px auto;
+      padding: 50px;
+      .contact{
+        .content{
+          color: #002D5E;
+        }
+      }
     }
-    p{
-      font-size: 1em;
-      font-weight: 500;
-      line-height: 1.5em;
-      color: #002D5E;
+  }
+  // PC
+  @media screen and (min-width: 1024px) {
+    #contact{
+      .contactContent{
+        width: 960px;
+        .contact{
+          width: 50%;
+          display: flex;
+          margin:10px auto;
+          .icon{
+            text-align: right;
+            width: 40%;
+          }
+          .content{
+            width: 60%;
+            font-size: 1em;
+            line-height: 1.5em;
+            padding-top: 0.4em;
+            padding-left: 2em;
+          }
+        }
+      }
+    }
+  }
+  // 手機 & 平板
+  @media screen and (max-width: 1023px) {
+    #contact{
+      .contactContent{
+        box-sizing: border-box;
+        width: 100%;
+        .contact{
+          width: 50%;
+          display: flex;
+          margin-top:10px;
+          .icon{
+            text-align: right;
+            width: 40%;
+          }
+          .content{
+            width: 60%;
+            font-size: 1em;
+            line-height: 1.5em;
+            padding-top: 0.4em;
+            padding-left: 2em;
+          }
+        }
+      }
     }
   }
 </style>

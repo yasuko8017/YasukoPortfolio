@@ -41,14 +41,24 @@ export default {
     font-family: "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif;
   }
   h2{
-    font-size: 2em;
     font-weight: bolder;
-    letter-spacing: 0.3em;
     text-align: center;
-    padding: 2.2em 0 1em 0;
-    span{
-      color: #8DABC5;
-      padding: 15px 100px;
+    color: #8DABC5;
+  }
+  // PC
+  @media screen and (min-width: 1024px) {
+    h2{
+      font-size: 1.7em;
+      letter-spacing: 0.3em;
+      padding-bottom: 0.6em;
+    }
+  }
+  // 手機 & 平板
+  @media screen and (max-width: 1023px) {
+    h2{
+      font-size: 1.5em;
+      letter-spacing: 0.3em;
+      padding-bottom: 0.6em;
     }
   }
 </style>

@@ -1,17 +1,38 @@
 <template>
   <div id='practice'>
-    <h2>
-      <span>
+    <div class="practiceContent">
+      <h2>
         PRACTICE
-      </span>
-    </h2>
+      </h2>
+    </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
   #practice{
-    height: 700px;
     width: 100%;
     background: linear-gradient(to right, #DBEDF0 40%, #fff);
+    .practiceContent{
+      margin:0px auto;
+      padding: 50px;
+    }
+  }
+  // PC
+  @media screen and (min-width: 1024px) {
+    #practice{
+      .practiceContent{
+        width: 960px;
+        
+      }
+    }
+  }
+  // 手機 & 平板
+  @media screen and (max-width: 1023px) {
+    #practice{
+      .practiceContent{
+        box-sizing: border-box;
+        width: 100%;
+      }
+    }
   }
 </style>
