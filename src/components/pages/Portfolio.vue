@@ -10,7 +10,7 @@ export default {
           title: "[Vue] 個人 Profolio",
           desc: "首次使用Vue.js做自主實作訓練，搭配sass實作RWD網頁(目前為初版，持續更新完善)",
           codeUrl: "https://github.com/yasuko8017/YasukoPortfolio",
-          url: "https://localhost:8080"
+          url: "https://yasuko8017.github.io/"
         },
         {
           img: require("../../assets/works/namecard.png"),
