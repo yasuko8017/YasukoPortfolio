@@ -4,6 +4,7 @@
       <h2>
         PRACTICE
       </h2>
+      
     </div>
   </div>
 </template>

@@ -27,6 +27,11 @@
     .aboutContent{
       display: flex;
       margin:0px auto;
+      .photo{
+        img{
+          border-radius:50%;
+        }
+      }
       .intro{
         padding: 50px;
         .name{
@@ -45,12 +50,12 @@
       .aboutContent{
         width: 960px;
         .photo{
-          width: 35%;
-          padding: 10px;
+          width: 30%;
+          padding: 30px;
         }
         .intro{
           box-sizing: border-box;
-          width: 65%;
+          width: 70%;
           .name{
             font-size: 1.5em;
             padding: 1em 0em;
@@ -98,6 +103,10 @@
       .aboutContent{
         width: 100%;
         flex-direction: column;
+        .photo{
+          margin: 50px auto 0px auto;
+          width: 80%;
+        }
         .intro{
           box-sizing: border-box;
           .name{
