@@ -66,14 +66,15 @@ export default {
             {{work.desc}}
           </div>
           <div class="btn">
-            <a :href="work.codeUrl">
+            <a :href="work.codeUrl" class="codeBtn">
               <p>CODE</p>
             </a>
-            <a :href="work.url">
+            <a :href="work.url" class="urlBtn">
               <p>URL</p>
             </a>
           </div>
         </div>
+        <div style="clear:both"></div>
       </div>
       <h3>
         近日來努力精進自己的前端技能，邊學習邊實作，作品集持續開發進行中
@@ -90,7 +91,6 @@ export default {
       margin:0px auto;
       .worksContent{
         width: 100%;
-        display: flex;
         .work{
           background: #DBEDF0;
           box-shadow:4px 4px 8px #80A491;
@@ -109,6 +109,7 @@ export default {
             color: #1760A0;
             text-align: center;
             padding: 15px;
+            white-space:nowrap;
             font-weight: bolder;
           }
           .description{
@@ -117,16 +118,22 @@ export default {
           }
           .btn{
             text-align: center;
-            margin-top: 1em;
+            position: relative;
             a{
-              display: inline-block;
+              display: block;
               background: #7FC1D0;
               color: #FFFFFF;
-              width: 49%;
-              box-sizing: border-box;
-              padding: 10px;
-              text-align: center;
               font-weight: bolder;
+              padding: 10px;
+              position: absolute;
+            }
+            .codeBtn{
+              bottom: 0;
+              left: 0;
+            }
+            .urlBtn{
+              bottom: 0;
+              right: 0;
             }
           }
         }
@@ -145,9 +152,9 @@ export default {
         padding: 50px;
         .worksContent{
           .work{
-            width: 33%;
+            width: 290px;
             margin: 15px;
-            flex-wrap: wrap;
+            float: left;
             .image{
               padding-top: 10px;
               padding-bottom: 10px;
@@ -162,9 +169,11 @@ export default {
             .description{
               font-size: 0.8em;
               line-height: 1.5em;
+              height: 90px;
             }
             .btn{
               a{
+                width: 124px;
                 font-size: 0.8em;
               }
             }
@@ -183,18 +192,17 @@ export default {
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     #portfolio{
       .portfolioContent{
-        box-sizing: border-box;
-        width: 100%;
-        padding: 50px;
+        width: 768px;
         .worksContent{
           .work{
-            width: 33%;
+            width: 354px;
             margin: 15px;
-            flex-wrap: wrap;
+            float: left;
             .image{
-              padding-top: 8px;
-              padding-bottom: 8px;
-              height: 156px;
+              box-sizing: border-box;
+              padding-top: 10px;
+              padding-bottom: 10px;
+              height: 240px;
               img{
                 height: 100%;
               }
@@ -205,9 +213,11 @@ export default {
             .description{
               font-size: 0.65em;
               line-height: 1.5em;
+              height: 90px;
             }
             .btn{
               a{
+                width: 156px;
                 font-size: 0.6em;
               }
             }
@@ -230,9 +240,11 @@ export default {
         padding-top: 50px;
         .worksContent{
           width: 100%;
+          display: flex;
           flex-direction: column;
           .work{
-            margin: 15px;
+            width: 320px;
+            margin:15px auto;
             .image{
               padding-top: 8px;
               padding-bottom: 8px;
@@ -246,9 +258,11 @@ export default {
             .description{
               font-size: 0.65em;
               line-height: 1.5em;
+              height: 80px;
             }
             .btn{
               a{
+                width: 139px;
                 font-size: 0.6em;
               }
             }

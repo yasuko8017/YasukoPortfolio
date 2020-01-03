@@ -105,7 +105,7 @@
         flex-direction: column;
         .photo{
           margin: 50px auto 0px auto;
-          width: 80%;
+          width: 65%;
         }
         .intro{
           box-sizing: border-box;
