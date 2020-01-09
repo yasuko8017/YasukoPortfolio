@@ -1,7 +1,13 @@
 <script>
 import WorksList from '../common/WorksList';
+import portfolioWorks from "../../data/portfolioWorks";
 
 export default {
+  computed:{
+    portfolioWorks(){
+      return portfolioWorks;
+    }
+  },
   components:
   {
     WorksList,
@@ -15,7 +21,7 @@ export default {
       <h2>
         PORTFOLIO
       </h2>
-      <WorksList/>
+      <WorksList :works="portfolioWorks"/>
       <h3>
         近日來努力精進自己的前端技能，邊學習邊實作，作品集持續開發進行中
       </h3>
