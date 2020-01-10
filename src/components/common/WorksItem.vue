@@ -1,6 +1,9 @@
 <script>
 export default {
-  props: ['workdata'],
+  props: {
+    workdata:{
+    },
+  }
 }
 </script>
 
